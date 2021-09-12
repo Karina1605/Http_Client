@@ -1,4 +1,5 @@
-﻿using MongoDbExample.Models;
+﻿using ConsoleApp5.HttpPart;
+using MongoDbExample.Models;
 using Service_Client_Example.HttpPart;
 using System;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace ConsoleApp5
 
         static async Task Main(string[] args)
         {
-            _operator = new HttpProxy(new HttpService());
+            _operator = new HttpProxy(new HttpServiceFlUrl());
             await DoWork();
             Console.WriteLine("Hello World!");
         }
